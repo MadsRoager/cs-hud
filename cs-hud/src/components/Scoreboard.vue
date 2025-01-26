@@ -230,7 +230,7 @@
 
     .container {
       display: flex;
-      gap: 16px;
+      gap: 2%;
     }
 
     .table {
