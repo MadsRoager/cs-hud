@@ -160,10 +160,10 @@
         // Parse Log File Content
         parseLogFile(content: string): PlayerStats[] {
           const logs = content.split('\n');
-          var stats = new Map<string, PlayerStats>;
+          const stats = new Map<string, PlayerStats>;
 
-          var roundStats = new Map<number, Map<string, PlayerStats>>;
-          var currentRound = 0;
+          let roundStats = new Map<number, Map<string, PlayerStats>>;
+          let currentRound = 0;
     
           logs.forEach((line) => {
               if (line.includes('World triggered "Match_Start"')) {
