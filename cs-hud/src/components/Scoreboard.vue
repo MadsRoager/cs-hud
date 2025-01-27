@@ -127,7 +127,7 @@
     computed: {
       selectedRound(): PlayerStats[] | null {
         if (this.selectedRoundNumber !== null && this.rounds.has(this.selectedRoundNumber)) {
-          return Array.from(this.rounds.get(this.selectedRoundNumber)!.values());
+          return Array.from(this.rounds.get(this.selectedRoundNumber)!.values()).sort((p1, p2) => p2.kills - p1.kills);
         }
         return null
       },
